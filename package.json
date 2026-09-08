@@ -1,0 +1,28 @@
+{
+  "name": "portifolio-automacao-cpm-typescript",
+  "version": "1.0.0",
+  "description": "Aulas praticas de automação",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulobrandao26/portifolio-automacao-cpm-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/paulobrandao26/portifolio-automacao-cpm-typescript/issues"
+  },
+  "homepage": "https://github.com/paulobrandao26/portifolio-automacao-cpm-typescript#readme",
+  "devDependencies": {
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}
