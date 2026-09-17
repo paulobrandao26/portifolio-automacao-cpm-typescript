@@ -50,6 +50,8 @@ async function ListarComent(postId:number) {
     
 }
 
+
+
 async function chamarRes(){
 
     listarPost();
