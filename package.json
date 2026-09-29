@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/paulobrandao26/portifolio-automacao-cpm-typescript#readme",
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2",
     "vitest": "^5.0.0"
