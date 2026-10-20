@@ -8,6 +8,7 @@ test.describe("ato 1 - validar carregamento e visibilidade de elementos", () => 
   test.beforeEach(async ({ page }) => {
     //navegar ate pagina de login
     await page.goto(`${BASE_URL}/login.html`);
+
   });
 
   test("validar titulo e carregamento da pagina", async ({ page }) => {
@@ -22,7 +23,14 @@ test.describe("ato 1 - validar carregamento e visibilidade de elementos", () => 
     // verificar se btn esta desativado
     await expect(page.locator('#loginBtn')).toBeDisabled();
   });
+
+
+
 });
+
+
+
+
 
 test.describe('Ato 2 - Caminho feliz', () => {
     test('Validar Acesso e redireionar ao Painel', async({page}) =>{
@@ -38,4 +46,32 @@ test.describe('Ato 2 - Caminho feliz', () => {
         //validar o redirecionamento para a pagina/painel
         await expect (page).toHaveURL(/painel\.html/);
     })
+
+} )
+test.describe('Localizar acesso pagina de painel', () => {
+
+  test('Validar Acesso e redireionar ao Painel', async({page}) =>{
+        //navegar ate pagina de login
+        await page.goto(`${BASE_URL}/login.html`);
+        // preencher campos utilizando o fill()
+        await page.fill('#email','admin@system.com');
+        await page.fill('#password','AdminPassword123');
+        //validar botão ativo
+        await expect(page.locator('#loginBtn')).toBeEnabled();
+        //ação de clique no botão
+        await page.click('#loginBtn'); 
+        //validar o redirecionamento para a pagina/painel
+        await expect (page).toHaveURL(/painel\.html/);
+    })
+
+    test('Validar acesso com login e senha validos de admin', async({page}) =>{
+
+      await page.goto(`${BASE_URL}/login.html`);
+      await page.locator('#email').fill('admin@system.com');
+      await page.locator('#password').fill('AdminPassword123');
+      await expect(page.locator('#loginBtn')).toBeEnabled();
+      await page.click('#loginBtn');
+      await expect(page).toHaveURL(/painel\.html/);
+    })
+
 } )
