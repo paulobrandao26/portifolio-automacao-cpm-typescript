@@ -5,7 +5,7 @@ import {Page, Locator } from '@playwright/test';
 //METODOS RETOMAM OS LOCATOS PARA O TESTE APENAS FAZER O (ASSERT)
 //MELHOR PQ SE UM SELETOR MUDAR NO HTML SO ATUALIZAMOS EM UM UNICO LOCAL DO PAGE OBJECT MODEL
 
-export class loginPage{
+export class LoginPage{
     //locators 
     readonly emailImput: Locator;
     readonly passwordImput: Locator;
